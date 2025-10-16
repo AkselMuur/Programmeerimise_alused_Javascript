@@ -66,14 +66,12 @@ let students = 16;
 //students +=2;
 //students++
 //students
-Math.sqrt(students);           //RUUTJUUR EI oska tööle panna
-
-console.log(students);
-
-
-let result = 1+2*3+4**2;
-console.log(result);
+Math.sqrt(students);           //RUUTJUUR 
+console.log(Math.sqrt(students));
 */
+
+//let result = 1+2*3+4**2;
+//console.log(result);
 
 // How to accept user input
 /*
@@ -112,10 +110,60 @@ console.log(z, typeof z);
 */
 
 // constants
-
-let pi = 3.14159;
+/*
+let PI = 3.14159;
 let radius;
 let circumference;
 
-radius = window.prompt("Enter the radius of a circle: ");
-radius = Number(radius);
+//radius = window.prompt("Enter the radius of a circle: ");
+//radius = Number(radius);
+
+//circumference = 2 * pi * radius;
+
+//console.log(`The circumference is ${circumference}`);
+
+document.getElementById("mySubmit").onclick = function() {
+    radius = document.getElementById("myText").value;
+    radius = Number(radius);
+    circumference = 2 * PI * radius;
+    document.getElementById("myH3").textContent = `The circumference is ${circumference} cm`;
+}
+
+*/
+
+// COUNTER PROGRAM
+/*
+const decreaseBtn = document.getElementById("decreaseBtn");
+const resetBtn = document.getElementById("resetBtn");
+const increaseBtn = document.getElementById("increaseBtn");
+let count = 0;
+
+increaseBtn.onclick = function() {
+    count++;
+    countLabel.textContent = count;
+}
+
+decreaseBtn.onclick = function() {
+    count--;
+    countLabel.textContent = count;
+}
+
+resetBtn.onclick = function() {
+    count=0;
+    countLabel.textContent = count;
+}
+
+*/
+
+// MATH
+
+console.log(Math.PI);
+console.log(Math.sqrt(16));
+console.log(Math.pow(2, 4));
+console.log(Math.E);
+
+let x = 3.21;
+let y = 2;
+let z;
+z = Math.round(x);
+console.log(z);
