@@ -1,191 +1,30 @@
-//console.log("Hello!");
-
-//console.log("I like pizza!");
-
-//window.alert("This is an alert!");
-//window.alert("I like pizza!");
-
-// This is a comment
-
-/* This is also a comment
-    Group comment control + K + C
-*/
-
-/* 1 TUND!!!!!!!!!!!!!!!!
-document.getElementById("myH1").textContent = "Hello!";
-document.getElementById("myP").textContent = "I like pizza!";
-
-let x;
-x = 123;
-
-console.log(x);
-
-let age = 25;
-let price = 10.99;
-
-console.log(`Your are ${age} years old`);
-console.log(`The price is $${price}`);
-
-
-
-let online = false;
-let forSale = true;
-let isStudent = true;
-
-console.log("Bro is online");
-console.log(forSale);
-console.log(isStudent);
-*/
-
-// 2 TUND !!!!!!!!!!!!!!! variables
-/*
-let fullName = "Bro Code";
-let age = 25;
-let isStudent = false;
-
-document.getElementById("p1").textContent = `Your name is ${fullName}`;
-document.getElementById("p2").textContent = `Your are ${age} yeas old`;
-document.getElementById("p3").textContent = `Enrolled: ${isStudent}`;
-
-console.log(document);
-console.log(window);
-
-console.log(typeof isStudent);
-*/
-// arithmetic operators + - * / % ** ++ --
-
-/*
-let students = 16;
-
-//students = students + 1;             //LIIDA
-//students = students - 2;             //LAHUTA
-//students = students * 2;             //KORRUTA
-//students = students / 2;             //JAGA   
-//students = students ** 2;            //ASTMES
-//let extraStudents = students % 3;    //JÄÄK
-//students +=2;
-//students++
-//students
-Math.sqrt(students);           //RUUTJUUR 
-console.log(Math.sqrt(students));
-*/
-
-//let result = 1+2*3+4**2;
-//console.log(result);
-
-// How to accept user input
-/*
-let username;
-
-//username = window.prompt("Enter your username: ");
-console.log(username);
-document.getElementById("mySubmit").onclick = function() {
-    username = document.getElementById("myText").value;
-  //  console.log(username);
-  document.getElementById("myH1").textContent = `Hello ${username}`;
-}
-
-*/
-
-// type conversion
-/*
-//let age = window.prompt("How old are you?");
-//age = Number(age);
-//age +=1;
-//console.log(`You are ${age} years old`);
-//console.log(age,typeof age  );
-
-let x = "pizza";
-let y = "pizza";
-let z = "pizza";
-
-x = Number(x);
-y = String(y);
-z = Boolean(z);
-
-console.log(x, typeof x);
-console.log(y, typeof y);
-console.log(z, typeof z);
-
-*/
-
-// constants
-/*
-let PI = 3.14159;
-let radius;
-let circumference;
-
-//radius = window.prompt("Enter the radius of a circle: ");
-//radius = Number(radius);
-
-//circumference = 2 * pi * radius;
-
-//console.log(`The circumference is ${circumference}`);
-
-document.getElementById("mySubmit").onclick = function() {
-    radius = document.getElementById("myText").value;
-    radius = Number(radius);
-    circumference = 2 * PI * radius;
-    document.getElementById("myH3").textContent = `The circumference is ${circumference} cm`;
-}
-
-*/
-
-// COUNTER PROGRAM
-/*
-const decreaseBtn = document.getElementById("decreaseBtn");
-const resetBtn = document.getElementById("resetBtn");
-const increaseBtn = document.getElementById("increaseBtn");
-let count = 0;
-
-increaseBtn.onclick = function() {
-    count++;
-    countLabel.textContent = count;
-}
-
-decreaseBtn.onclick = function() {
-    count--;
-    countLabel.textContent = count;
-}
-
-resetBtn.onclick = function() {
-    count=0;
-    countLabel.textContent = count;
-}
-
-*/
-
-// MATH
-
-/*
-//console.log(Math.PI);
-//console.log(Math.sqrt(16));
-//console.log(Math.pow(2, 4));
-//console.log(Math.E);
-
-let x = 3;
-let y = 2;
-let z = 1;
-//z = Math.round(x);
-//z=Math.floor(x);
-//z = Math.ceil(x);
-//z = Math.trunc(x);
-//z=Math.pow(y,x);
-//z= Math.sqrt(x);
-//z=Math.log(x);
-//z=Math.sin(x);
-//z=Math.cos(x);
-//z=Math.tan(x);
-//z=Math.abs(x);
-//z = Math.sign(x);
-
-let max = Math.max(x,y,z);
-let min = Math.min(x,y,z);
-
-
-console.log(min);
-console.log(max);
-
-*/
-
 // RANDOM NUMBER GENERATOR
+/*
+const min = 50;
+const max = 100;
+
+let randomNum = Math.floor(Math.random()*(max-min))+min; // creates random number between 0 and 1
+
+console.log(randomNum);
+*/
+
+const myButton = document.getElementById("myButton");
+const label1 = document.getElementById("label1");
+const label2 = document.getElementById("label2");
+const label3 = document.getElementById("label3");
+
+const min = 1;
+const max = 6;
+let randomNum1;
+let randomNum2;
+let randomNum3;
+
+myButton.onclick = function () {
+  randomNum1 = Math.floor(Math.random() * max) + min;
+  randomNum2 = Math.floor(Math.random() * max) + min;
+  randomNum3 = Math.floor(Math.random() * max) + min;
+
+  label1.textContent = randomNum1;
+  label2.textContent = randomNum2;
+  label3.textContent = randomNum3;
+};
