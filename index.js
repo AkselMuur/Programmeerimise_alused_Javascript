@@ -212,7 +212,7 @@ The sum is: <sum>
 where <sum> is the sum of the input integers.
 */
 
-/*
+
 let x;
 let y;
 
@@ -223,7 +223,7 @@ y=Number(y);
 let sum = x + y;
 document.getElementById("myH1").textContent = `The sum is: ${sum}`;
 
-*/
+
 /*
 <label >username:</label>
 <input id="myText" type="text"><br><br>
@@ -249,7 +249,7 @@ Here's the code to get you started:
 var a = 10;
 var b = 20;
 */
-
+/*
 let a = 10;
 let b = 20;
 let temp;
@@ -259,5 +259,5 @@ a = b;
 b = temp;
 
 document.getElementById("myH1").textContent = `A on: ${a} ja B on: ${b} `;
-
+*/
 //Simple Swapping Program
