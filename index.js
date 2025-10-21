@@ -189,3 +189,75 @@ console.log(max);
 */
 
 // RANDOM NUMBER GENERATOR
+
+
+//Additon calculator
+
+/* 
+Task
+Create a program that takes in two integers and outputs their sum onto the HTML document.
+
+ 
+Description
+In this exercise, you have to create a program that asks the user to input two integers, one-by-one, and then outputs their sum.
+
+Each of these inputs is to be obtained using a prompt dialog.
+
+The first input prompt should display the following text: 'a = ?'. The second input prompt should display 'b = ?'
+
+The output should be as follows:
+
+The sum is: <sum>
+ 
+where <sum> is the sum of the input integers.
+*/
+
+/*
+let x;
+let y;
+
+x=window.prompt("a = ?");
+y=window.prompt("b = ?");
+x=Number(x);
+y=Number(y);
+let sum = x + y;
+document.getElementById("myH1").textContent = `The sum is: ${sum}`;
+
+*/
+/*
+<label >username:</label>
+<input id="myText" type="text"><br><br>
+<button id="mySubmit">submit</button>
+*/
+//Additon calculator
+
+//Simple Swapping Program
+
+/*
+Task
+Swap the values of two given variables.
+ 
+Description
+Swapping the values of two variables is a routine activity in many computer algorithms, especially the ones that perform sorting of arrays.
+
+For instance, if a = 10 and b = 20, then after swapping these two variables with one another, we'd get a = 20 and b = 10.
+
+In this exercise, you ought to swap the values of the variables a and b with one another.
+
+Here's the code to get you started:
+
+var a = 10;
+var b = 20;
+*/
+
+let a = 10;
+let b = 20;
+let temp;
+
+temp = a;
+a = b;
+b = temp;
+
+document.getElementById("myH1").textContent = `A on: ${a} ja B on: ${b} `;
+
+//Simple Swapping Program
