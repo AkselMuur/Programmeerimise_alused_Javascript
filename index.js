@@ -313,8 +313,8 @@ const vastus = document.getElementById("vastus");
 go.onclick = function () {
   if (o >= 100) {
     vastus.textContent = "You are TOO OLD to enter this site";
-  } else if (o == 0) {
-    vastus.textContent = "You can't enter. You were just born.";
+  } else if (o == a) {
+    vastus.textContent = "Result "x+y;
   } else if (o >= 18) {
     vastus.textContent = "You are old enough to enter this site!";
   } else if (o < 0) {
