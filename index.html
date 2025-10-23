@@ -7,13 +7,43 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-<h1 id="myH1">Welcome</h1>
-<label >username:</label>
-<input id="myText" type="text"><br><br>
-<button id="mySubmit">submit</button>
-    <p id="p1"></p>
-        <p id="p2"></p>
-            <p id="p3"></p>
+    <h1 id="myH1">Welcome</h1>
+
+    <input type="checkbox" id="myCheckBox" />
+    <label for="myCheckBox">Subscribe</label><br /><br />
+    <input type="radio" id="visaBtn" name="card" />
+    <label for="visaBtn">Visa</label><br />
+    <input type="radio" id="mastercardBtn" name="card" />
+    <label for="mastercardBtn">Mastercard</label><br />
+    <input type="radio" id="payPalBtn" name="card" />
+    <label for="payPalBtn">Paypal</label><br /><br />
+    <button type="Submit" id="mySubmit">Submit</button>
+
+    <p id="subResult"></p>
+    <p id="paymentResult"></p>
+
+
+
+    <label> Enter first number</label><br />
+    <input type="number" id="x" /><br />
+
+    <label> Enter second number</label><br />
+    <input type="number" id="y" /><br />
+
+    <label> Enter operation</label><br />
+
+    <input type="number" id="o" /><br />
+    <button type="Submit" id="go">Arvuta</button>
+
+    <p id="vastus"></p><br>
+
+    <p>"a" for addition</p>
+    <p>"s" for subtraction</p>
+    <p>"m" for multiplication</p>
+    <p>"d" for division</p>
+    <p>"e" for ecponentiation</p>
+    <p>"r" for remainder</p>
+
     <script src="index.js"></script>
   </body>
 </html>

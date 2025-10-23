@@ -188,4 +188,137 @@ console.log(max);
 
 */
 
-// RANDOM NUMBER GENERATOR
+// IF STATEMENTS - JÄRGMINE PÄEV !!!!!!!!!!!!!!!!
+/*
+let age = 15;
+
+if (age >=18) {
+
+    console.log("You are old enough to use this site!");
+}
+
+else{
+    console.log("You must be 18+ to enter this site!");
+
+}
+
+*/
+/*
+let time = 10;
+
+if (time <12){
+    console.log("Good morning!");
+}
+else {
+    console.log("Good afternoon!");
+}
+    */
+/*
+let isStudent = true;
+
+if(isStudent){
+    console.log("You are a student!");
+}
+else {
+    console.log("You are not a student!");
+}
+    */
+/*
+let age = 17;
+let hasLicense = true;
+
+if (age >= 16) {
+  console.log("You are old enough to drive!");
+  if (hasLicense) {
+    console.log("You have your license!");
+  } else {
+    console.log("You do not have your license yet!");
+  }
+} else {
+  console.log("You must be 16+ to have a license");
+}
+*/
+
+/*
+const myText=document.getElementById("myText");
+const mySubmit = document.getElementById("mySubmit");
+const reslutElement = document.getElementById("resultElement");
+let age;
+
+mySubmit.onclick=function(){
+
+    age=myText.value;
+    age=Number(age);
+if(age>=100){
+    reslutElement.textContent="You are TOO OLD to enter this site";
+}
+else if(age == 0){
+    reslutElement.textContent="You can't enter. You were just born.";
+
+}
+else if (age >=18){
+    reslutElement.textContent="You are old enough to enter this site!";
+
+}
+
+else if (age < 0 ){
+    reslutElement.textContent="Your age can't be below 0";
+}
+else{reslutElement.textContent="You must be 18+ to enter this site!";
+}
+
+}
+*/
+
+// .checked property
+/*
+const myCheckBox = document.getElementById("myCheckBox");
+const visaBtn = document.getElementById("visaBtn");
+const mastercardBtn = document.getElementById("mastercardBtn");
+const paypalBtn = document.getElementById("paypalBtn");
+const submitBtn = document.getElementById("submitBtn");
+const resultElement = document.getElementById("resultElement");
+
+mySubmit.onclick = function () {
+  if (myCheckBox.checked) {
+    subResult.textContent = "You are SUBSCRIBED!";
+  } else {
+    subResult.textContent = "You are NOT SUBSCRIBED!";
+  }
+  if (visaBtn.checked) {
+    paymentResult.textContent = "You are paying with VISA";
+  } else if (mastercardBtn.checked) {
+    paymentResult.textContent = "You are paying with MASTERCARD";
+  } else if (payPalBtn.checked) {
+    paymentResult.textContent = "You are paying with PAYPAL";
+  } else {
+    paymentResult.textContent = "You must select a payment method!";
+  }
+};
+
+// ternary operator = a shortcut for an if statement
+// helps to assign a variable based on a condition
+// condition ? value if true : value if false
+*/
+
+//Rudimentary Calculator
+
+const x = document.getElementById("x");
+const y = document.getElementById("y");
+const o = document.getElementById("o");
+
+const go = document.getElementById("go");
+
+go.onclick = function () {
+  if (o >= 100) {
+    reslutElement.textContent = "You are TOO OLD to enter this site";
+  } else if (age == 0) {
+    reslutElement.textContent = "You can't enter. You were just born.";
+  } else if (age >= 18) {
+    reslutElement.textContent = "You are old enough to enter this site!";
+  } else if (age < 0) {
+    reslutElement.textContent = "Your age can't be below 0";
+  } else {
+    reslutElement.textContent = "You must be 18+ to enter this site!";
+  }
+};
