@@ -1,5 +1,7 @@
 //console.log("Hello!");
 
+//const { use } = require("react");
+
 //console.log("I like pizza!");
 
 //window.alert("This is an alert!");
@@ -281,7 +283,7 @@ console.log(`Your grade is ${letterGrade}`);
 */
 
 // string methods - allow you to manipulate and work with strings
-
+/*
 let userName = "BroCode";
 
 // carAt(index) - leiab indeksil oleva tähe
@@ -338,3 +340,94 @@ console.log(
     3
   )} slice(index1,index2) - slices out a portion of a string from index1 to index2`
 );
+*/
+/*
+
+const fullName = "Aksel Müür Code"
+
+//let firstName = fullName.slice(0,3);
+//let lastName=fullName.slice(4,8);
+
+//let firstChar =fullName.slice(0,1);
+//let lastChar =fullName.slice(-1);
+//console.log(lastChar);
+
+
+let firstName=fullName.slice(0,fullName.indexOf(" "))
+let middleName=fullName.slice(fullName.indexOf(" ")+1,fullName.lastIndexOf(" "))
+let lastName=fullName.slice(fullName.lastIndexOf(" ")+1)
+
+
+console.log(firstName);
+console.log(middleName);
+console.log(lastName)
+*/
+
+/*
+const email= "aksel.muur@voco.ee"
+
+let username = email.slice(0,email.indexOf("@"))
+let extension = email.slice(email.indexOf("@")+1,(email.length))
+let last = email.length-1;
+
+
+console.log(username);
+console.log(extension);
+console.log(username,"@",extension);
+console.log(last);
+
+*/
+
+// METHOD CHAINING
+/*
+let username = window.prompt("Enter your username: ");
+
+username = username.trim().charAt(0).toUpperCase() + username.trim().slice(1).toLowerCase();
+
+
+console.log(username);
+document.getElementById("myH1").textContent = `Hello ${username}`;
+
+*/
+
+//      LOGICAL OPERATORS - used to combine or manupulate boolean values        !!!!!!!!!!!!!!!
+// AND = &&
+// OR = || ("option + <" on mac)
+// NOT = !
+
+//const temp = -20;
+/*
+if(temp> 0 && temp <=30){
+    console.log("Weather is good")
+
+}
+
+else {
+    console.log("Weather is BAD")
+}
+*/
+
+/*
+if (temp <= 0 || temp >= 30) {
+  console.log("Weather is BAD");
+} else {
+  console.log("Weather is GOOD");
+}
+*/
+/*
+const isSunny=true;
+
+if(!isSunny){
+    console.log("It is cloudy");
+}
+else{
+    console.log("It is sunny");
+}
+
+
+*/
+
+
+//          strict inequality operator                  !!!!!!!!!!!!!!!
+// = assignment operator
+// 
