@@ -302,19 +302,20 @@ mySubmit.onclick = function () {
 */
 
 //Rudimentary Calculator
+/*
+let x = document.getElementById("x");
+let y = document.getElementById("y");
+let o = document.getElementById("o");
+*/
+let go = document.getElementById("go");
+let vastus = document.getElementById("vastus");
 
-const x = document.getElementById("x");
-const y = document.getElementById("y");
-const o = document.getElementById("o");
-
-const go = document.getElementById("go");
-const vastus = document.getElementById("vastus");
-
+/*
 go.onclick = function () {
   if (o >= 100) {
     vastus.textContent = "You are TOO OLD to enter this site";
-  } else if (o == a) {
-    vastus.textContent = "Result "x+y;
+  } else if (o == "a") {
+    vastus.textContent = `Result is ${x+y}`;
   } else if (o >= 18) {
     vastus.textContent = "You are old enough to enter this site!";
   } else if (o < 0) {
@@ -323,3 +324,19 @@ go.onclick = function () {
     vastus.textContent = "Unknown operation";
   }
 };
+*/
+
+let x = 1;
+let y = 2;
+let o = "a";
+
+go.onclick = function () {
+  switch (o) {
+    case o == "a":
+      vastus.textContent = `Result is ${x + y}`;
+      break;
+    default:
+      vastus.textContent = "Unknown operation";
+  }
+};
+console.log(o);
