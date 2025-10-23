@@ -211,8 +211,41 @@ let message = isStudent ? "You are a student":"You are not a student";
 console.log(message);
 */
 
+/*
 let purchaseAmount = 100;
 
 let discount = purchaseAmount >= 100 ? 10:0;
 console.log(`Your total is $${purchaseAmount-purchaseAmount*(discount/100)}`);
 
+*/
+
+// SWITCH - replacement for multiple IF statements
+
+let day =4;
+
+switch(day){
+    case 1:
+        console.log("Monday");
+        break;
+case 2:
+        console.log("Tuesday");
+        break;
+case 3:
+        console.log("Wednesday");
+        break;
+case 4:
+        console.log("Thursday");
+        break;
+case 5:
+        console.log("Friday");
+        break;
+case 6:
+        console.log("Saturday");
+        break;
+case 7:
+        console.log("Sunday");
+        break;
+default:
+    console.log("Invalid day");
+        
+    }
