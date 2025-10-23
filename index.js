@@ -307,8 +307,6 @@ let x = document.getElementById("x");
 let y = document.getElementById("y");
 let o = document.getElementById("o");
 */
-let go = document.getElementById("go");
-let vastus = document.getElementById("vastus");
 
 /*
 go.onclick = function () {
@@ -325,10 +323,15 @@ go.onclick = function () {
   }
 };
 */
-
+let x = document.getElementById("x");
+let y = document.getElementById("y");
+let vastus = document.getElementById("vastus");
 let o = document.getElementById("o");
 
 go.onclick = function () {
+  let o = document.getElementById("o").value;
+  let x = Number(document.getElementById("x").value);
+  let y = Number(document.getElementById("y").value);
   switch (o) {
     case "a":
       vastus.textContent = `Result is ${x + y}`;
@@ -348,9 +351,7 @@ go.onclick = function () {
     case "r":
       vastus.textContent = `Result is ${x % y}`;
       break;
-
     default:
       vastus.textContent = "Unknown operation";
   }
 };
-console.log(o);
