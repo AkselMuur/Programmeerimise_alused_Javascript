@@ -326,15 +326,29 @@ go.onclick = function () {
 };
 */
 
-let x = 1;
-let y = 2;
-let o = "a";
+let o = document.getElementById("o");
 
 go.onclick = function () {
   switch (o) {
-    case o == "a":
+    case "a":
       vastus.textContent = `Result is ${x + y}`;
       break;
+    case "s":
+      vastus.textContent = `Result is ${x - y}`;
+      break;
+    case "m":
+      vastus.textContent = `Result is ${x * y}`;
+      break;
+    case "d":
+      vastus.textContent = `Result is ${x / y}`;
+      break;
+    case "e":
+      vastus.textContent = `Result is ${x ** y}`;
+      break;
+    case "r":
+      vastus.textContent = `Result is ${x % y}`;
+      break;
+
     default:
       vastus.textContent = "Unknown operation";
   }
