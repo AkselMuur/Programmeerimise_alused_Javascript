@@ -250,7 +250,7 @@ default:
         
     }
     */
-
+/*
 let testScore = 85;
 
 let letterGrade;
@@ -278,3 +278,63 @@ switch (true) {
     letterGrade = "Invalid score";
 }
 console.log(`Your grade is ${letterGrade}`);
+*/
+
+// string methods - allow you to manipulate and work with strings
+
+let userName = "BroCode";
+
+// carAt(index) - leiab indeksil oleva tähe
+console.log(userName.charAt(0));
+
+userName.indexOf("o"); // leiab tähe indeksi
+console.log(userName.indexOf("o"));
+
+console.log(`${userName.length} length`); // pikkus
+//
+
+console.log(
+  `${userName.padStart(
+    10,
+    0
+  )} padStart(index1,index2) - pad a string wiht index2 until it reaches the lenght index1`
+);
+
+console.log(`${userName.repeat(4)} repeat(index) - repeats index many times`);
+
+console.log(
+  `${userName.replaceAll(
+    "o",
+    "a"
+  )} replaceAll(index1,index2) - replaces all occurrences of a substring with a new substring`
+);
+
+console.log(
+  `${userName.charCodeAt(
+    4
+  )} charCodeAt(index) - returns the Unicode of the character at the specified index`
+);
+
+console.log(
+  `${userName.codePointAt(
+    4
+  )} codePointAt(index) - returns the Unicode code point value at the specified index`
+);
+
+let text1 = "Bro";
+let text2 = "Code";
+console.log(
+  `${text1.concat(
+    "",
+    text2,
+    "asd",
+    "toomas"
+  )} concat(index1,index2...) - joins two or more strings `
+);
+
+console.log(
+  `${userName.slice(
+    1,
+    3
+  )} slice(index1,index2) - slices out a portion of a string from index1 to index2`
+);
