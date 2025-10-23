@@ -220,8 +220,8 @@ console.log(`Your total is $${purchaseAmount-purchaseAmount*(discount/100)}`);
 */
 
 // SWITCH - replacement for multiple IF statements
-
-let day =4;
+/*
+let day =8;
 
 switch(day){
     case 1:
@@ -246,6 +246,35 @@ case 7:
         console.log("Sunday");
         break;
 default:
-    console.log("Invalid day");
+    console.log(`${day} is invalid day`);
         
     }
+    */
+
+let testScore = 85;
+
+let letterGrade;
+
+switch (true) {
+  case testScore >= 90:
+    letterGrade = "A";
+    break;
+  case testScore >= 80:
+    letterGrade = "B";
+    break;
+  case testScore >= 70:
+    letterGrade = "C";
+    break;
+  case testScore >= 60:
+    letterGrade = "D";
+    break;
+  case testScore >= 50:
+    letterGrade = "E";
+    break;
+  case testScore < 50:
+    letterGrade = "F";
+    break;
+  default:
+    letterGrade = "Invalid score";
+}
+console.log(`Your grade is ${letterGrade}`);
