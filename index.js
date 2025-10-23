@@ -308,17 +308,18 @@ const y = document.getElementById("y");
 const o = document.getElementById("o");
 
 const go = document.getElementById("go");
+const vastus = document.getElementById("vastus");
 
 go.onclick = function () {
   if (o >= 100) {
-    reslutElement.textContent = "You are TOO OLD to enter this site";
-  } else if (age == 0) {
-    reslutElement.textContent = "You can't enter. You were just born.";
-  } else if (age >= 18) {
-    reslutElement.textContent = "You are old enough to enter this site!";
-  } else if (age < 0) {
-    reslutElement.textContent = "Your age can't be below 0";
+    vastus.textContent = "You are TOO OLD to enter this site";
+  } else if (o == 0) {
+    vastus.textContent = "You can't enter. You were just born.";
+  } else if (o >= 18) {
+    vastus.textContent = "You are old enough to enter this site!";
+  } else if (o < 0) {
+    vastus.textContent = "Your age can't be below 0";
   } else {
-    reslutElement.textContent = "You must be 18+ to enter this site!";
+    vastus.textContent = "Unknown operation";
   }
 };
