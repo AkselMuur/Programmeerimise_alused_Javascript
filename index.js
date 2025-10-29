@@ -572,8 +572,6 @@ while(username === " "){
 }
 */
 
-
-
 /*
 let loggedIn = false;
 let username;
@@ -616,7 +614,6 @@ for (let i = 1; i <= 20; i++) {
   }
 }
 */
-
 
 //                  Number guessing game
 /*
@@ -671,4 +668,88 @@ if (i == 10) {
 }
 */
 
+//              FUNCTIONS             !!!!!!!!
 
+/*
+function happyBirthday(username,age){
+  console.log("Happy birthday to you!");
+  console.log("Happy birthday to you!");
+  console.log(`Happy birthday dear ${username}!`);
+  console.log("Happy birthday to you!");
+  console.log(`You are ${age} years old`)
+}
+
+happyBirthday("BroCode",25);
+
+*/
+/*
+function add(x, y) {
+  let result = x + y;
+  return result;
+}
+
+let answer1 = add(3, 3);
+
+console.log(answer1);
+
+function add(x, y) {
+  return x + y;
+}
+
+let answer2 = add(2, 2);
+
+console.log(answer2);
+
+function isEven(number) {
+  if (number % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isEven(2));
+
+function isValidEmail(email) {
+  if (email.includes("@")) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isValidEmail("aksel.muur@voco.ee"));
+
+//terenary
+
+function isValidEmail(email) {
+  return email.includes("@") ? true : false;
+}
+
+console.log(isValidEmail("aksel.muurvoco.ee"));
+*/
+
+//              VARIABLE SCOPE              !!!!!!!!!!!!!!!!!!!!!!!!
+
+/*
+let x = 3;
+
+function function1() {
+  //let x = 1;
+  console.log(x);
+}
+
+function function2() {
+  let x = 2;
+  console.log(x);
+}
+
+function1();
+x = 5;
+function2();
+*/
+
+
+
+
+//                    
