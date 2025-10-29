@@ -24,7 +24,7 @@ console.log(x);
 
 let age = 25;
 let price = 10.99;
-
+ 
 console.log(`Your are ${age} years old`);
 console.log(`The price is $${price}`);
 
@@ -553,3 +553,4 @@ if (PI !== "3.14") {
 } else {
   console.log("That is PI");
 }
+
