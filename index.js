@@ -16,6 +16,6 @@ alongside JavaScript
 
 let x;
 
-x=window.prompt("Sisesta temperatuur kas `C´elsiuses või `F´ahrenheitis")
+x = window.prompt("Sisesta temperatuur kas `C´elsiuses või `F´ahrenheitis");
 
 console.log(x);
