@@ -545,7 +545,7 @@ else{
 // === strict equality operator (compare if values AND datatype are equal)
 // != inequality operator
 // !== strict inequality operator
-
+/*
 const PI = "3.14";
 
 if (PI !== "3.14") {
@@ -553,4 +553,92 @@ if (PI !== "3.14") {
 } else {
   console.log("That is PI");
 }
+*/
 
+//            WHILE LOOP                              !!!!!!!!!!!!!!!!!!!
+//      while(condition){ }
+
+/*
+let username = "";
+while(username === ""|| username === null){
+  username = window.prompt('Enter your name');
+}
+console.log(`Hello ${username}`)
+*/
+
+/*
+while(username === " "){
+  console.log(`Hello sdg`)
+}
+*/
+
+
+
+/*
+let loggedIn = false;
+let username;
+let password;
+
+while (!loggedIn) {
+  username = window.prompt(`Enter your username`);
+  password = window.prompt(`Enter your password`);
+  
+  if (username === "x" && password === "y") {
+    loggedIn = true;
+    console.log("You are logged in!");
+    
+  } else {
+    console.log("Invalid credentials! Please try again");
+    break;
+  }
+ 
+}
+*/
+
+//                FOR LOOP            !!!!!!!!!!
+//      for (start;condition;step){ }
+/*
+let i = 10;
+for (i; i > 0; i -= 5) {
+  console.log(i);
+}
+*/
+
+// break - catkestab loop-i
+// continue - hüppab valemist üle.
+
+/*
+for (let i = 1; i <= 20; i++) {
+  if (i == 13) {
+    continue;
+  } else {
+    console.log(i);
+  }
+}
+*/
+
+
+//                  Number guessing game
+/*
+let x = Math.floor(Math.random() * 101);
+console.log(`${x}`);
+let guess;
+let i = 0;
+while (i < 5) {
+  guess = window.prompt(`Your guess`);
+  i++;
+  if (guess > x) {
+    console.log(`Too high!`);
+  } else if (guess < x) {
+    console.log(`Too low!`);
+  } else {
+    console.log(`Correct quess!`);
+    break;
+  }
+}
+
+*/
+
+const minNum=1;
+const maxNum=100;
+const answer=Math.random()*100
