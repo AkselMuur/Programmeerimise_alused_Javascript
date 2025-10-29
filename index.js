@@ -638,7 +638,37 @@ while (i < 5) {
 }
 
 */
+//                  Number guessing game
+/*
+const minNum = 1;
+const maxNum = 100;
+const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+const numGuesses = 5;
 
-const minNum=1;
-const maxNum=100;
-const answer=Math.random()*100
+console.log(`${answer}`);
+let guess;
+let i = 0;
+while (i < numGuesses) {
+  guess = window.prompt(`Guess a number`);
+  i++;
+  if (Number.isInteger(Number(guess))) {
+    if (guess > answer) {
+      console.log(`Too high!`);
+    } else if (guess < answer) {
+      console.log(`Too low!`);
+    } else {
+      console.log(`Correct quess!`);
+      i = 10;
+      break;
+    }
+  } else {
+    console.log("Not a number!");
+  }
+}
+if (i == 10) {
+} else {
+  console.log("Out of guesses!");
+}
+*/
+
+
