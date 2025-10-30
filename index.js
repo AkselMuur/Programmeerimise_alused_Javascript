@@ -749,4 +749,173 @@ x = 5;
 function2();
 */
 
-//
+//      ARRAY                     !!!!!!!!!!
+
+/*
+let fruits=["apple","orange","banana"];
+
+
+console.log(fruits);
+console.log(fruits[0]);
+console.log(fruits[1]);
+console.log(fruits[4]);
+
+fruits[1]="coconut"
+console.log(fruits);
+console.log(fruits[1]);
+
+fruits.push("cucumber"); //lisab lõppu
+console.log(fruits);
+
+fruits.pop(); // kustutab lõpust
+console.log(fruits);
+
+fruits.unshift("mango"); // lisab algusesse
+console.log(fruits);
+
+fruits.shift();   //kustutab algusest
+console.log(fruits);
+*/
+
+/*
+let fruits=["apple","orange","banana","coconut"];
+let index=fruits.indexOf("apple");
+
+
+let numOfFruits=fruits.length;    //ei pane sulge lõppu
+console.log(numOfFruits);
+console.log(index);
+
+index=fruits.indexOf("purple");
+console.log(index);
+
+*/
+/*
+
+let fruits=["apple","orange","banana","coconut"];
+
+for(let i =0;i<fruits.length;i++){
+  console.log(fruits[i]);
+}
+
+
+for(i =fruits.length-1;i>=0;i--){
+  console.log(fruits[i]);
+}
+
+
+for(let fruit of fruits){         //shortcut list
+  console.log(fruit);
+}
+
+fruits.sort();
+console.log(fruits);
+
+
+
+fruits.sort().reverse();  //saad funktsioone punktiga üksteise otsa chainida
+console.log(fruits);
+
+*/
+
+
+
+//                SPREAD OPERATOR       ...spread            !!!!!!!!!!!
+//  unpacks elements in arrays
+
+/*
+
+let numbers=[1,2,3,4,5];
+let maximum=Math.max(...numbers);
+let minimum=Math.min(...numbers);
+
+
+console.log(numbers);
+console.log(...numbers);
+
+console.log(maximum);
+console.log(minimum);
+*/
+
+/*
+let username="Bro code";
+
+let letters=[...username].join("-");
+
+console.log(letters);
+*/
+
+
+/*
+let fruits=["apple","orange","banana"];
+let vegetables=["carrots","celery","potatoes"];
+
+let foods=[...fruits[0],...vegetables,"eggs","milk"];
+
+console.log(fruits);
+console.log(foods);
+*/
+
+
+//                      rest parameters   ...rest - bundles separet elements into an array, opposite of spread operator. 
+//                                                  must be in function parameter otherwise it is spread function
+
+
+/*
+function openFridge (...foods){
+  console.log(...foods)
+}
+
+function getFood (...foods){
+   return foods
+}
+
+
+const food1 ="pizza"
+const food2 ="hamburger"
+const food3 ="hotdog"
+const food4 ="shushi"
+const food5 ="ramen"
+
+
+openFridge(food1,food2,food3,food4,food5)
+
+const foods =getFood(food1,food2,food3,food4,food5)
+
+console.log(foods)
+*/
+/*
+function sum(...numbers){
+  let result = 0
+  for(let number of numbers){
+    result += number
+  }
+  return result
+}
+function getAverage(...numbers){
+  let result = 0
+  for(let number of numbers){
+    result += number
+  }
+  return result/numbers.length;
+}
+
+const total = getAverage(75,100,85,90,50)
+console.log(total)
+*/
+/*
+const total=sum(1,2,3,4,5)
+console.log(`Your total is $${total}`)
+*/
+/*
+
+function combineString(...Strings){
+  return Strings.join(" ")
+}
+
+const fullName = combineString("Mr.","Spongebob","Squarepants","III");
+
+console.log(fullName)
+
+*/
+
