@@ -1,21 +1,27 @@
 // Temperature conversion program
 
-/*
-Create a program that converts temperatures between Celsius and Fahrenheit.
-The user inputs a temperature in Celsius, and the program outputs the equivalent temperature in Fahrenheit.
-Optionally, you can extend the program to handle conversions to and from Kelvin as well.
-Explanation:
-celsiusToFahrenheit: This function uses the formula F = (C * 9/5) + 32 to convert Celsius to Fahrenheit.
-fahrenheitToCelsius: This function uses the formula C = (F - 32) * 5/9 to convert Fahrenheit to Celsius.
-Prompt and Input: The program takes user input for the temperature and the scale (C or F) to determine which conversion to perform.
-NOTE
 
-This version is quite basic and can be expanded to include Kelvin or improve the UI by building it into a web page using HTML/CSS 
-alongside JavaScript
-*/
+const textBox = document.getElementById("textBox")
+const toFahren=document.getElementById("toFahrenheit")
+const toCelsius=document.getElementById("toCelsius")
+const result = document.getElementById("result")
+let temp;
 
-let x;
+function convert(){
+  if(toFahren.checked){
+    temp=Number(textBox.value)
+    temp=temp*9/5+32
+    result.textContent=temp.toFixed(1)+" Farenheiti"
+  }
+else if(toCelsius.checked){
+  temp=Number(textBox.value)
+  temp=(temp-32)*(5/9)
+  result.textContent=temp.toFixed(1)+" Celsiust"
+}
+else{
+  result.textContent="Select a unit"
+}
 
-x = window.prompt("Sisesta temperatuur kas `C´elsiuses või `F´ahrenheitis");
 
-console.log(x);
+
+}

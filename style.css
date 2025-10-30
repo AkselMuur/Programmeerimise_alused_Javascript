@@ -2,3 +2,22 @@ body{
     font-family: Verdana;
     font-size: 2em;
 }
+
+form{
+    text-align: center;
+}
+
+button:active{
+    background-color: aquamarine;
+    /*funktsiooni kutsung ei lase stiili peale*/
+}
+button:hover{
+    background-color: chartreuse;
+}
+#textBox{
+font-size: 1em;
+text-align: center;}
+
+button{
+    font-size: 1em;
+}
