@@ -1,35 +1,37 @@
-body{
-    font-family: Verdana;
-    font-size: 2em;
+body {
+  font-family: Verdana;
+  font-size: 2em;
 }
 
-#container{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+#container {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
-button{
-    font-size: 1.5rem;
+button {
+  border-radius: 20px;
+  font-size: 1.5rem;
+  background-color: rgb(142, 142, 235);
 }
 
-button:hover{
-    background-color: aqua;
+button:hover {
+  background-color: aqua;
 }
 
-button:active{
-    background-color: brown;
+button:active {
+  background-color: brown;
 }
-input{
-    font-size: 2rem;
-    width: 150px;
-    text-align: center;
-}
-
-#DiceResult{
-    margin: 20px;
+input {
+  font-size: 2rem;
+  width: 150px;
+  text-align: center;
 }
 
-#DiceImages img{
-    width: 100px;
-    margin: 5px;
+#DiceResult {
+  margin: 20px;
+}
+
+#DiceImages img {
+  width: 100px;
+  margin: 5px;
 }
