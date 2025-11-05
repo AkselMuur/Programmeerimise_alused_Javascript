@@ -982,3 +982,62 @@ function displayPage(result){
 }
 
 */
+
+//            forEach() = method used to iterate over the elements      !!!!!!!!
+/*                        of an array and apply a specified function (callback) 
+                      to each element
+                      
+                      array.forEach(callback)
+                      element, index, array are provided
+                      works only with arrays
+                      */
+/*
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(square);
+numbers.forEach(display);
+
+function display(element) {
+  console.log(element);
+}
+
+function triple(element, index, array) {
+  array[index] = element * 3;
+}
+
+function square(element,index,array){
+  array[index]=Math.pow(element,2);
+}
+*/
+
+/*
+let fruits = ["apple", "orange", "banana", "coconut"];
+
+fruits.forEach(UpperCase);
+fruits.forEach(display);
+fruits.forEach(lowerCase);
+fruits.forEach(display);
+fruits.forEach(capitalize);
+fruits.forEach(display);
+
+function UpperCase(element, index, array) {
+  array[index] = element.toUpperCase();
+}
+function lowerCase(element, index, array) {
+  array[index] = element.toLowerCase();
+}
+
+function capitalize(element, index, array) {
+  array[index] = element.charAt(0).toUpperCase() + element.slice(1);
+}
+
+function display(element) {
+  console.log(element);
+}
+
+*/
+
+
+
+//                .map() = accepts a callback and applies that function 
+//                         to each element of an array, then return a new array
