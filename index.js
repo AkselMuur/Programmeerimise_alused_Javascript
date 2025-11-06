@@ -1280,9 +1280,88 @@ setTimeout(function(){
 /*
 setTimeout( () => console.log("Hello"),3000);
 */
-
+/*
 const numbers = [1, 2, 3, 4, 5, 6];
 
 const squares = numbers.map((element) => Math.pow(element, 2));
 
 console.log(squares);
+*/
+
+//              Object = A collection of related properties and/or methods    !!!!!!!
+/*                      Can represent real word object (people, products, places)
+                        object={key:value,function()}
+*/
+
+/*
+const person1 ={
+  firstName: "Spongebob",
+  lastName: "Squarepants",
+  age:30,
+  isEmployed:true,
+  sayHello:function(){console.log("Hi! I am Spongebob!")},
+  sayBye:function(){console.log("Goodbye")},
+  eat:function(){console.log("I am eating a Krabby Patty")}
+}
+
+console.log(person1.firstName);
+console.log(person1.lastName);
+console.log(person1.age);
+console.log(person1.isEmployed);
+
+
+const person2 ={
+  firstName: "Patrick",
+  lastName: "Star",
+  age:42,
+  isEmployed:false,
+  sayHello:function(){console.log("Hey! I'm Patrick...")},
+  sayBye:function(){console.log("Bye...")},
+  eat:function(){console.log("I am eating roast beef, chicken and pizza")}
+}
+
+console.log(person2.firstName);
+console.log(person2.lastName);
+console.log(person2.age);
+console.log(person2.isEmployed);
+
+person1.sayHello();
+person2.eat();
+
+
+*/
+
+//          this = reference to the object where TIHS is used       !!!!!!!!!!!!
+/*                  (the object depends on the immediate context)
+                    person.name = this.name
+                    Does not work with arrow functions
+                  */
+
+/*                   
+const person1 = {
+  firstName: "Spongebob",
+  lastName: "Squarepants",
+  age: 30,
+  isEmployed: true,
+  favFood:"hamburgers",
+  sayHello: function () {
+    console.log(`Hi! I am ${this.firstName}`)
+  },
+  fav: function () {
+    console.log(`Hi! I am ${this.favFood}`)
+  },
+  sayBye: function () {
+    console.log("Goodbye");
+  },
+  eat: function () {
+    console.log("I am eating a Krabby Patty");
+  },
+};
+
+person1.sayHello();
+person1.fav();
+*/
+
+//          constructor = special method for defining the       !!!!!!!!!!!!!!!!
+/*                      properties and methods of objects
+ */
