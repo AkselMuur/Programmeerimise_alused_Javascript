@@ -7,6 +7,7 @@ const result = document.getElementById("result");
 const kpiCount = document.getElementById("kpi-count");
 const kpiAvg = document.getElementById("kpi-avg");
 const kpiTh = document.getElementById("kpi-th");
+const count = document.getElementById("count");
 
 const countInput = document.getElementById("Imput");
 
@@ -47,7 +48,7 @@ function showAverage() {
 //5.
 
 function resetAll() {
-  // TODO:
+  
   currentScores = [...scores];
   renderScores(currentScores);
   kpiAvg.textContent = "–";
@@ -56,8 +57,13 @@ function resetAll() {
 //6.
 
 function makeRandom() {
-  // TODO: vali n countInput väärtuse põhjal;
-  currentScores = makeRandomScoresEi;
+ currentScores =[]
+let i = 0;
+  while(i<count.value){
+    currentScores.push(Math.floor(Math.random() * 100));
+  i++;
+    }
+ 
   renderScores(currentScores);
 
   kpiAvg.textContent = "–";
