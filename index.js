@@ -1,70 +1,61 @@
-const scores = [45, 88, 32, 99, 74, 50, 61, 92, 39];
-let currentScores = [...scores]; // koopia
+const shoppingCart=[ 
+{ name: "apple", quantity: 4 },
+{ name: "banana", quantity: 2 },
+{ name: "orange", quantity: 5 },
+{ name: "milk", quantity: 1 },
+{ name: "bread", quantity: 2 }
+]
 
-const scoreList = document.getElementById("scoreList");
-const result = document.getElementById("result");
-
-const kpiCount = document.getElementById("kpi-count");
-const kpiAvg = document.getElementById("kpi-avg");
-const kpiTh = document.getElementById("kpi-th");
-const count = document.getElementById("count");
-
-const countInput = document.getElementById("Imput");
-
-//1.
-function renderScores() {
-  scoreList.innerHTML = "";
-  currentScores.forEach((score) => {
-    const item = document.createElement("p");
-    item.textContent = score;
-    scoreList.appendChild(item);
-  });
-  kpiCount.textContent = currentScores.length;
+// 1.
+function getSum(total, item) {
+  return total + item.quantity;
 }
 
-//2.
+console.log(shoppingCart.reduce(getSum, 0)  );
 
-function addBonus() {
-  currentScores = currentScores.map((score) => score + 5);
-  renderScores();
+// 2.
+
+shoppingCart.push({ name: "yogurt", quantity: 3 });
+console.log(shoppingCart);
+
+// 3.
+
+const item = shoppingCart.find(product => product.name === "apple");
+
+if (item) {
+  item.quantity += 3;
+} else {
+  shoppingCart.push({ name: "apple", quantity: 3 });
 }
 
-//3.
+console.log(shoppingCart);
 
-function filterByThreshold() {
-  currentScores = currentScores.filter((score) => score >= 60);
-  renderScores();
+// 4.
+
+const item2 = shoppingCart.findIndex(product => product.name === "banana");
+
+if (item2 !== -1) {
+  shoppingCart.splice(item2, 1);
 }
 
-//4.
+console.log(shoppingCart);
 
-function showAverage() {
-  let avg = Math.floor(
-    currentScores.reduce((acc, score) => (acc += score)) / currentScores.length
-  );
-  kpiAvg.textContent = avg;
+// 5.
+const productNames = shoppingCart.map(product => product.name);
+
+console.log(productNames);
+
+// 6.
+
+const kontroll = shoppingCart.findIndex(product => product.name === "milk");
+
+if (kontroll !== -1) {
+  console.log("True")
+}
+else{
+  console.log("False")
 }
 
-//5.
+// 7.
 
-function resetAll() {
-  
-  currentScores = [...scores];
-  renderScores(currentScores);
-  kpiAvg.textContent = "–";
-}
-
-//6.
-
-function makeRandom() {
- currentScores =[]
-let i = 0;
-  while(i<count.value){
-    currentScores.push(Math.floor(Math.random() * 100));
-  i++;
-    }
- 
-  renderScores(currentScores);
-
-  kpiAvg.textContent = "–";
-}
+console.log(shoppingCart.sort((a,b) => b.quantity - a.quantity));
