@@ -46,3 +46,19 @@ function showAverage() {
 
 //5.
 
+function resetAll() {
+  // TODO:
+  currentScores = [...scores];
+  renderScores(currentScores);
+  kpiAvg.textContent = "–";
+}
+
+//6.
+
+function makeRandom() {
+  // TODO: vali n countInput väärtuse põhjal;
+  currentScores = makeRandomScoresEi;
+  renderScores(currentScores);
+
+  kpiAvg.textContent = "–";
+}
