@@ -1708,3 +1708,189 @@ console.log(person.age);
 //                variables in a convenient way
 //                [] = to perform array destructuring
 //                {} = to perform object destructuring
+
+// example 1
+/*
+let a = 1;
+let b = 2;
+
+[a,b]=[b,a];
+console.log(a);
+console.log(b);
+*/
+
+// example 2
+/*
+const colors = ["red","green","blue", "black", "white"];
+[colors[0],colors[4]]=[colors[4],colors[0]];
+
+console.log(colors);
+*/
+
+//example 3
+/*
+const colors = ["red","green","blue", "black", "white"];
+
+const [firstColor, secondColor, thirdColor, ...extraColors]=colors;
+
+console.log(firstColor);
+console.log(secondColor);
+console.log(thirdColor);
+console.log(extraColors);
+*/
+
+// example 4
+/*
+const person1 = {
+  firstName: "Spongebob",
+  lastName: "SquarePants",
+  age: 30,
+  job: "Fry Cook",
+}
+
+const person2 = {
+  firstName: "Patrick",
+  lastName: "Star",
+  age: 34,
+  }
+
+  const {firstName, lastName, age, job="Unemployed"}= person2;
+
+  console.log(firstName);
+    console.log(lastName);
+      console.log(age);
+        console.log(job);
+*/
+// example 5
+/*
+function displayPerson({firstName, lastName, age, job="Unemployed"}){
+  console.log(`name: ${firstName} ${lastName}`);
+  console.log(`age: ${age}`);
+  console.log(`job: ${job}`);
+}
+
+const person1 = {
+  firstName: "Spongebob",
+  lastName: "SquarePants",
+  age: 30,
+  job: "Fry Cook",
+}
+
+const person2 = {
+  firstName: "Patrick",
+  lastName: "Star",
+  age: 34,
+  }
+
+  displayPerson(person1);
+*/
+
+// Nested objekts = Objects inside of other Objects. Allows you to
+//                  represent more complex data structures
+//                   Child object is enclosed by a Parent Object
+
+//                  Person{Address{}, ContactInfo{}}
+//                  ShoppingCart{Keyboard{}, Mouse{}, Monitor{}}
+//                  classe kutsud välja operaatoriga "new"
+
+/*
+const person = {
+  fullName: "Spongebob Squarepants",
+  age: 30,
+isStudent: true,
+hobbies:["karate", "jellyfishing", "cooking"],
+address: {
+  street: "124 Conch St.",
+  city: "Bikini Bottom",
+  country: "Int. Water"
+}
+}
+
+console.log(person.fullName)
+console.log(person.age)
+console.log(person.isStudent)
+console.log(person.hobbies[2])
+console.log(person.address.country)
+
+for(const property in person.address){
+  console.log(person.address[property]);
+}
+
+*/
+
+/*
+class Person {
+  constructor(name,age, ...address){
+    this.name=name;
+    this.age = age;
+    this.address= new Address(...address);
+  }
+}
+
+class Address{
+  constructor(street, city, country){
+    this.street=street;
+    this.city=city;
+    this.country=country;
+  }
+}
+
+const person1 = new Person("Spongebob", 30, "124 Conch St.", "Bikini bottom",
+  "Int. Waters"
+)
+
+const person2 = new Person("Patrick", 37, "128 Conch St.", "Bikini bottom",
+  "Int. Waters"
+)
+
+const person3 = new Person("Squidward", 45, "126 Conch St.", "Bikini bottom",
+  "Int. Waters"
+)
+
+console.log(person3);
+console.log(person3.name);
+console.log(person3.address);
+console.log(person3.address.street);
+console.log(person3.address.city);
+console.log(person3.address.country);
+
+*/
+
+const fruits = [
+  { name: "apple", color: "red", calories: 95 },
+  { name: "orange", color: "orange", calories: 45 },
+  { name: "banana", color: "yellow", calories: 105 },
+  { name: "coconut", color: "white", calories: 159 },
+  { name: "pineapple", color: "yellow", calories: 37 },
+];
+
+/*
+fruits.push({name: "grapes", color:"purple", calories: 62})
+fruits.pop();
+fruits.splice(1,2);
+console.log(fruits);
+*/
+// fruits.forEach(fruit => console.log(fruit));
+
+const fruitNames = fruits.map((fruit) => fruit.name);
+const fruitColors = fruits.map((fruit) => fruit.color);
+
+console.log(fruitNames);
+console.log(fruitColors);
+
+const yellowFruits = fruits.filter((fruit) => fruit.color === "yellow");
+const lowCalFruits = fruits.filter((fruit) => fruit.calories < 100);
+
+console.log(yellowFruits);
+console.log(lowCalFruits);
+
+const maxFruit = fruits.reduce((max, fruit) =>
+  fruit.calories > max.calories ? fruit : max
+);
+const minFruit = fruits.reduce((min, fruit) =>
+  fruit.calories < min.calories ? fruit : min
+);
+// koolon ":" on OR funktsioon, kui funktsioon tõene siis anna fruit muul juhul max
+
+console.log(maxFruit);
+console.log(minFruit);
