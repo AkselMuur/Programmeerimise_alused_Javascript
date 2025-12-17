@@ -1855,7 +1855,7 @@ console.log(person3.address.city);
 console.log(person3.address.country);
 
 */
-
+/*
 const fruits = [
   { name: "apple", color: "red", calories: 95 },
   { name: "orange", color: "orange", calories: 45 },
@@ -1871,7 +1871,7 @@ fruits.splice(1,2);
 console.log(fruits);
 */
 // fruits.forEach(fruit => console.log(fruit));
-
+/*
 const fruitNames = fruits.map((fruit) => fruit.name);
 const fruitColors = fruits.map((fruit) => fruit.color);
 
@@ -1894,3 +1894,245 @@ const minFruit = fruits.reduce((min, fruit) =>
 
 console.log(maxFruit);
 console.log(minFruit);
+*/
+
+// eventlistener - listen for specific events to create interactive web pages event. !!!!!!
+//                  click, mouseover, mouseout
+//                  .addEventListener(event, callback);
+
+/*
+const myBox = document.getElementById("myBox");
+const myButton = document.getElementById("myButton");
+
+/*
+function changeColour(event){
+  event.target.style.backgroundColor = "tomato";
+  event.target.textContent="OUCH!";
+}
+
+myBox.addEventListener("click",changeColour);
+*/
+/*
+myBox.addEventListener("click", (event) => {
+  event.target.style.backgroundColor = "tomato";
+  event.target.style.fontFamily = "Calibri";
+
+  event.target.textContent = "OUCH!";
+});
+
+myBox.addEventListener("mouseover", (event) => {
+  event.target.style.backgroundColor = "yellow";
+  event.target.textContent = "Don't do it";
+});
+
+myBox.addEventListener("mouseout", (event) => {
+  event.target.style.backgroundColor = "lightgreen";
+  event.target.textContent = "Click Me";
+});
+
+
+myButton.addEventListener("click", (event) => {
+  event.target.style.backgroundColor = "tomato";
+  event.target.style.fontFamily = "Calibri";
+
+  event.target.textContent = "OUCH!";
+});
+
+myButton.addEventListener("mouseover", (event) => {
+  event.target.style.backgroundColor = "yellow";
+  event.target.textContent = "Don't do it";
+});
+
+myButton.addEventListener("mouseout", (event) => {
+  event.target.style.backgroundColor = "lightgreen";
+  event.target.textContent = "Click Me";
+});
+*/
+
+// eventListener - Listen for specific events to create interactive web pages !!!!!!!!!!!!
+//                  events: keydown, keyup
+//                  document.addEventListener(event,callback);
+/*
+const myBox = document.getElementById("myBox");
+const moveAmount = 50;
+let x = 0;
+let y = 0;
+
+document.addEventListener("keydown", (event) => {
+  myBox.textContent = "No!";
+  myBox.style.backgroundColor = "Blue";
+});
+
+document.addEventListener("keyup", (event) => {
+  myBox.textContent = "Yay!";
+  myBox.style.backgroundColor = "Orange";
+});
+
+document.addEventListener("keydown", (event) => {
+  //console.log(event.key);
+  event.preventDefault();
+  if (event.key.startsWith("Arrow")) {
+    switch (event.key) {
+      case "ArrowUp":
+        y -= moveAmount;
+        break;
+      case "ArrowDown":
+        y += moveAmount;
+        break;
+      case "ArrowLeft":
+        x -= moveAmount;
+        break;
+      case "ArrowRight":
+        x += moveAmount;
+        break;
+    }
+
+    myBox.style.top = `${y}px`;
+    myBox.style.left = `${x}px`;
+  }
+});
+*/
+//        VISIBILITY                          !!!!!!!!!!!!!!!!!!!!!!!!!
+
+/*
+const myButton =document.getElementById("myButton");
+const myImg=document.getElementById("myImg");
+
+myButton.addEventListener("click",event =>{
+ if(myImg.style.visibility === "hidden"){
+  myImg.style.visibility="visible";
+  myButton.textContent ="Hide";
+ }
+ else{
+  myImg.style.visibility="hidden";
+  myButton.textContent ="Show"
+ }
+})
+*/
+
+//    NodeList = Static collection of HTML elements by (id, class, element) !!!!!!!!!!
+//                Can be created by using querySlectorAll()
+//                Similar to an array, but no (map, finter, reduce)
+//                NodeList wont update to automatically reflext changes
+/*
+let buttons = document.querySelectorAll(".myButtons");
+
+buttons.forEach((button) => {
+  button.style.backgroundColor = "green";
+  button.textContent += " HI!";
+});
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.target.style.backgroundColor = "tomato";
+  });
+});
+
+buttons.forEach((button) => {
+  button.addEventListener("mouseover", (event) => {
+    event.target.style.backgroundColor = "hsl(205,100%,40%)";
+  });
+});
+
+buttons.forEach((button) => {
+  button.addEventListener("mouseout", (event) => {
+    event.target.style.backgroundColor = "hsl(205,100%,60%)";
+  });
+});
+
+const newButton = document.createElement("button");
+newButton.textContent = "Button 5";
+newButton.classList = "myButtons";
+document.body.appendChild(newButton);
+
+buttons = document.querySelectorAll(".myButtons");
+console.log(buttons);
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.target.remove();
+    buttons=document.querySelectorAll(".myButtons");
+    console.log(buttons);
+  });
+});
+*/
+
+// classList = Element property in JavaScript used to interact with an element's !!!!!!!!!!!
+//             list of classes (CSS classes). Allows you to make reusable classes
+//              for many elements acriss your webpage.
+
+// add()
+// remove()
+// toggle(Remove if present, Add if not)
+// replace(oldClass, newClass)
+// contains()
+/*
+const myButton = document.getElementById("myButton");
+
+//myButton.classList.add("enabled");
+//myButton.classList.remove("enabled");
+//myButton.classList.add("hover");
+/*
+myButton.addEventListener("mouseover", (event) => {
+  event.target.classList.toggle("hover");
+});
+myButton.addEventListener("mouseout", (event) => {
+  event.target.classList.toggle("hover");
+});
+*/
+/*
+const myH1 = document.getElementById("myH1");
+myButton.classList.add("enabled");
+/*
+myH1.classList.add("enabled");
+
+myH1.addEventListener("click", (event) => {
+  if (event.target.classList.contains("disabled")) {
+    event.target.textContent += "No!";
+  } else {
+    event.target.classList.replace("enabled", "disabled");
+  }
+});
+
+myButton.addEventListener("click", (event) => {
+  if (event.target.classList.contains("disabled")) {
+    event.target.textContent += "No!";
+  } else {
+    event.target.classList.replace("enabled", "disabled");
+  }
+});
+*/
+let buttons = document.querySelectorAll(".myButtons");
+
+buttons.forEach((button) => {
+  button.classList.add("enabled");
+});
+
+buttons.forEach((button) => {
+  button.addEventListener("mouseover", (event) => {
+    event.target.classList.toggle("hover");
+  });
+});
+buttons.forEach((button) => {
+  button.addEventListener("mouseout", (event) => {
+    event.target.classList.toggle("hover");
+  });
+});
+
+/*
+buttons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.target.classList.replace("enabled", "disabled");
+  });
+});
+*/
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    if (event.target.classList.contains("disabled")) {
+      event.target.textContent += " No!";
+    } else {
+      event.target.classList.replace("enabled", "disabled");
+    }
+  });
+});
