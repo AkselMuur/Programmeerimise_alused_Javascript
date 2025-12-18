@@ -2102,6 +2102,7 @@ myButton.addEventListener("click", (event) => {
   }
 });
 */
+/*
 let buttons = document.querySelectorAll(".myButtons");
 
 buttons.forEach((button) => {
@@ -2126,7 +2127,7 @@ buttons.forEach((button) => {
   });
 });
 */
-
+/*
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
     if (event.target.classList.contains("disabled")) {
@@ -2136,3 +2137,212 @@ buttons.forEach((button) => {
     }
   });
 });
+*/
+
+// Promise = An Object that manages asynchronous operations.     !!!!!!!!!!!!!!!!!!!!!!
+/*            Wrap a promise Object around {asynchronous code}
+              "I promise to return a value"
+              PENDING -> RESOLVED or REJECTED
+              new Promise((resolve, reject) => {asynchronous code})
+*/
+/*
+function walkDog() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const dogwalked = true;
+      if (dogwalked) {
+        resolve("You walk the dog");
+      } else {
+        reject("You didn't walk the dog");
+      }
+    }, 500);
+  });
+}
+
+function cleanKitchen() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const kitchenCleaned = true;
+      if (kitchenCleaned) {
+        resolve("You clean the kitchen");
+      } else {
+        reject("You didn't clean the kitchen");
+      }
+    }, 500);
+  });
+}
+
+function takeOutTrash(callback) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const trashTakenOut = false;
+      if (trashTakenOut) {
+        resolve("You take out the trash");
+      } else {
+        reject("You didn't take out the trash");
+      }
+    }, 500);
+  });
+}
+
+walkDog()
+  .then((value) => {
+    console.log(value);
+    return cleanKitchen();
+  })
+  .then((value) => {
+    console.log(value);
+    return takeOutTrash();
+  })
+  .then((value) => {
+    console.log(value);
+    console.log("You finished all the chores!");
+  })
+  .catch((error) => console.error(error));
+  */
+/*
+// callback hell
+walkDog(() => {
+  cleanKitchen(() => {
+    takeOutTrash(() => console.log("You finished all the chores!"));
+  });
+});
+*/
+
+// async/await = Async = makes a function return a promise              !!!!!!!!!!!!!!
+//               Await = makes an async function wait for a promise
+
+//                Allows you to write asyncronous code in synchronous manner
+//                Async doesnt have resolve or reject parameters
+//                Everything after Await is placed in an event queue
+/*
+function walkDog() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const dogwalked = true;
+      if (dogwalked) {
+        resolve("You walk the dog");
+      } else {
+        reject("You didn't walk the dog");
+      }
+    }, 500);
+  });
+}
+
+function cleanKitchen() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const kitchenCleaned = false;
+      if (kitchenCleaned) {
+        resolve("You clean the kitchen");
+      } else {
+        reject("You didn't clean the kitchen");
+      }
+    }, 500);
+  });
+}
+
+function takeOutTrash(callback) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const trashTakenOut = true;
+      if (trashTakenOut) {
+        resolve("You take out the trash");
+      } else {
+        reject("You didn't take out the trash");
+      }
+    }, 500);
+  });
+}
+
+async function doChores() {
+  try {
+    const walkDogResult = await walkDog();
+    console.log(walkDogResult);
+    const cleanKitchenResult = await cleanKitchen();
+    console.log(cleanKitchenResult);
+    const takeOutTrashResult = await takeOutTrash();
+    console.log(takeOutTrashResult);
+    console.log("You finished all the chores!");
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+doChores();
+*/
+
+// JSON = (JavaScript Object Notation) data-interchange format              !!!!!!!!!!!!!
+/*        Used for exchangeing data between a server and a web application
+          JSON files {key:value} OR [value1, value2, value3]
+          */
+
+/*
+const names =["Spongebob","Patric","Squidward","Sandy"]
+const person={
+    "name":"Spongebob",
+    "age":"30",
+    "isEmployed":true,
+    "hobbies":["jellyfishing","karate","Cooking"]
+}
+
+
+const jsonString=JSON.stringify(names)
+console.log(jsonString)
+console.log(person)
+
+
+const jsonNames=`["Spongebob","Patrick","Squidward"]`;
+const paresdData=JSON.parse(jsonNames)
+console.log(paresdData)
+
+fetch("person.json")
+.then(response=> response.json())
+.then(value=>console.log(value))
+*/
+
+// fetch = Functinon used for making HTTP requests to fetch resources.    !!!!!!!!!
+/*          (JSON style data, images, files)
+            Simplifyes asynchronous data fetching in Javascript and used for interacting
+            with APIs to retrieve and send data asynchronously over the web
+            fetch(url,{options})
+*/
+
+/*
+fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+.then(response=>{
+  if(!response.ok){
+    throw new Error("Could not fetch resource")
+  }
+  return  response.json()
+}
+   
+ )
+.then(data=>console.log(data))
+.catch(error=>console.log(error))
+*/
+/*
+async function fetchData() {
+  try {
+    const pokemonName = document
+      .getElementById("pokemonName")
+      .value.toLowerCase();
+
+    const response = await fetch(
+      `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+    );
+
+    if (!response.ok) {
+      throw new Error("Could not fetch resource");
+    }
+    const data = await response.json();
+    const pokemonSprite = data.sprites.front_default;
+    const imgElement = document.getElementById("pokemonSprite");
+    imgElement.src = pokemonSprite;
+    imgElement.style.display = "block";
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+*/
